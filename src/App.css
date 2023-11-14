@@ -1,38 +1,563 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #212121
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.d-flex {
+    display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.flex1 {
+    flex: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.flex3 {
+    flex: 3;
 }
 
-.App-link {
-  color: #61dafb;
+.flex5 {
+    flex: 5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flex7 {
+    flex: 7;
 }
+
+.flex9 {
+    flex: 9;
+}
+
+.flexWrap {
+    flex-wrap: wrap;
+}
+
+.flex-Column {
+    flex-direction: column;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.j-SpaceAround {
+    justify-content: space-around;
+}
+
+.j-spaceBetween {
+    justify-content: space-between;
+}
+
+.a-center {
+    align-items: center;
+}
+
+a.start {
+    align-items: flex-start;
+}
+
+.VH100Width100 {
+    height: 100vh;
+    width: 100%;
+}
+
+.width50 {
+    width: 50%;
+}
+
+.heightWidth100 {
+    height: 100%;
+    width: 100%;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+.fontBold {
+    font-weight: bold;
+}
+
+.pad10 {
+    padding: 10px;
+}
+
+.pBot0 {
+    padding-bottom: 0;
+}
+
+.mBot10 {
+    margin-bottom: 10px;
+}
+
+.mLeft10 {
+    margin-left: 10px;
+}
+
+.m10 {
+    margin: 10px;
+}
+
+.m5 {
+    margin: 5px;
+}
+
+.gap10 {
+    gap: 10px;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.overflowAuto {
+    overflow: auto;
+}
+
+.border1 {
+    border: 1px solid black;
+}
+
+.borderNone {
+    border: none;
+}
+
+.borderWhite2 {
+    border: 2px solid white;
+}
+
+.textWhite {
+    color: white;
+}
+
+.bgTransparent {
+    background-color: transparent;
+}
+
+.textUnderline {
+    text-decoration: underline;
+}
+
+.j-flexEnd {
+    justify-content: flex-end;
+}
+
+.j-flexStart {
+    justify-content: flex-start;
+}
+
+.align-flexStart {
+    align-items: flex-start;
+}
+
+.align-end {
+    align-items: end;
+}
+
+.padBotTop10 {
+    padding: 10px 0 10px 0;
+}
+
+/*                     */
+
+
+.registerPage input, .registerPage button,
+.loginPage input, .loginPage button,
+.profilePageInput {
+    margin: 5px;
+    text-align: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 30px;
+    width: 180px;
+    background-color: transparent;
+    border: 1px solid gray;
+}
+
+.registerPage input,
+.registerPage button,
+.registerPage p,
+.loginPage button,
+.loginPage p,
+.loginPage label,
+.loginPage input,
+.mainPage button,
+.mainPage p,
+.mainPage input,
+.mainPage textarea {
+    color: white;
+}
+
+.registerPage input::placeholder,
+.loginPage input::placeholder,
+.mainPage input::placeholder,
+.mainPage textarea::placeholder {
+    color: darkgray;
+}
+
+.mainPage button {
+    background-color: gray;
+}
+
+.checkbox-container input {
+    width: 20px;
+    margin: 0 10px 0 0
+}
+
+.checkbox-container {
+    display: flex;
+    width: 180px;
+}
+
+.mainPageHeader button {
+    height: 50%;
+    width: 15%;
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 1s;
+    z-index: 1;
+}
+
+.mainPageHeader button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #464646;
+    transition: left 0.4s;
+    z-index: -1;
+}
+
+.mainPageHeader button:hover::before {
+    left: 0;
+}
+
+.mainPageHeader button:hover {
+    background-color: transparent;
+}
+
+
+.profileUserPicture {
+    height: 250px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.changePasswordButton {
+    height: 35px;
+    width: 150px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+    margin-top: 5px;
+}
+
+.changePictureButton {
+    height: 35px;
+    width: 75%;
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+    margin-top: 5px;
+}
+
+.usersContainer {
+    flex-wrap: wrap;
+    overflow: auto;
+    align-content: start;
+    justify-content: start;
+}
+
+.userDiv {
+    height: 100px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.userDiv img {
+    width: 100px;
+    height: 100px;
+}
+
+
+.usersWriteMessage {
+    height: 25px;
+    width: 110px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.personsChatTab img {
+    height: 75px;
+    width: 75px;
+}
+
+.personsChatTab {
+    width: 95%;
+    overflow: hidden;
+    min-height: 120px
+}
+
+.personsChatTab p {
+    padding: 0;
+}
+
+.peopleToChatWithTab {
+    min-width: 310px;
+    overflow: auto;
+}
+
+.messageSentByYou,
+.messageSentByOtherUser {
+    max-width: 100%;
+    min-width: 10%;
+    box-sizing: border-box;
+    margin: 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.messageSentByYou {
+    align-self: flex-end;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+.messageSentByOtherUser {
+    align-self: flex-start;
+    background-color: dimgrey;
+    border-radius: 10px;
+}
+
+.messageSentByYou p,
+.messageSentByOtherUser p {
+    display: inline-block;
+    overflow-wrap: break-word;
+    padding: 1px 5px 1px 5px;
+    background-color: transparent;
+}
+
+
+.postsHeader {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.postsSortDiv {
+    width: 85%;
+    justify-content: center;
+    gap: 10px;
+}
+
+.postsSorting {
+    width: 90%;
+    justify-content: space-around;
+}
+
+.postsSorting button, p {
+    padding: 10px;
+    border: none;
+}
+
+.postsSortDiv button {
+    border-radius: 25px;
+    min-width: 85px;
+    height: 45px;
+}
+
+.sendMessageTab textarea {
+    width: 85%;
+    height: 75%;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.sendMessageTab button {
+    width: 15%;
+    height: 75%;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.usersPost img {
+    height: 150px;
+    width: 300px;
+}
+
+.usersPost {
+    border: 1px solid white;
+    height: 280px;
+    padding: 5px;
+}
+
+.messageInputOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.messageInputContainer {
+    background-color: gray;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.messageInputContainer p {
+    background-color: gray;
+}
+
+.messageInputContainer button {
+    background-color: #212121;
+    border: none;
+}
+
+.messageInputContainer textarea, .messageInputContainer button,
+.clickedPostContainer button, .clickedPostContainer input,
+.postInputContainer button, .postInputContainer input {
+    padding: 5px;
+    margin: 3px;
+    border: none;
+    border-radius: 5px;
+}
+
+.messageInputContainer textarea {
+    max-width: 300px;
+    min-width: 150px;
+    max-height: 100px;
+    min-height: 50px;
+}
+
+
+.postInputOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.postInputContainer, .clickedPostContainer {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 65%;
+}
+
+.postInputContainer {
+    background-color: gray;
+    width: 40%;
+}
+
+.postDiv,
+.postAdjust {
+    width: 100%;
+    padding: 10px;
+    background-color: #212121;
+}
+
+.postDiv {
+    height: 200px;
+}
+
+.postComment p {
+    background-color: transparent;
+}
+
+.postComment {
+    background-color: gray;
+    border-radius: 10px;
+}
+
+.postLikeButton {
+    height: 25px;
+    width: 75px;
+    text-align: center;
+}
+
+.postOwnerPictureInPost {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+}
+
+.bgWhite {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.postedImage {
+    height: 200px;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+.postCommentList {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    max-height: 225px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.postCommentCreateDiv input {
+    width: 50%;
+    padding: 7px;
+}
+
+.postInputContainer button {
+    background-color: #212121;
+}
+
+.postInputContainer input {
+    padding: 5px;
+}
+
+.postInputContainer p {
+    padding: 5px;
+    background-color: gray;
+}
+
+.lightToDarkButton,
+.darkToLightButton{
+    transition: 0.4s
+}
+
+.lightToDarkButton:hover {
+    background-color: #464646;
+}
+.darkToLightButton:hover {
+    background-color: #212121;
+}
+
+
+
+
+
