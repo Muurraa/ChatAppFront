@@ -4,6 +4,7 @@
     background-color: #212121
 }
 
+
 .d-flex {
     display: flex;
 }
@@ -469,6 +470,9 @@ a.start {
     flex-direction: column;
     align-items: center;
     width: 65%;
+}
+.clickedPostContainer{
+    margin-top: 25px;
 }
 
 .postInputContainer {
